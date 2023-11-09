@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { backendUrl } from '../../config';
-import { Navigate } from 'react-router-dom';
+import { Navigate,useNavigate } from 'react-router-dom';
 
 const Register = () => {
+
+    const navigate = useNavigate();  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -43,7 +45,6 @@ const Register = () => {
         alert('User Alredy Exist');
       } else {
         alert('Registered Successfully');
-        localStorage.setItem('user', JSON.stringify(data));
         handleReset();
       }
   };
@@ -90,6 +91,8 @@ const Register = () => {
           />
         </div>
         <button class="btn btn-success" type="submit" style={{marginLeft:"40%"}}>Register</button>
+        <button class="btn btn-warning" type="submit" onClick={()=>{
+            navigate('/login') }} style={{marginLeft:"20px"}} >Login</button>
       </form>
     </div>
   );
