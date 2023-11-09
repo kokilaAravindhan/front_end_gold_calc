@@ -90,7 +90,7 @@ const Register = () => {
             style={{marginLeft:"15px"}}
           />
         </div>
-        <button class="btn btn-success" type="submit" style={{marginLeft:"40%"}}>Register</button>
+        <button class="btn btn-success" type="submit" style={{marginLeft:"20%"}}>Register</button>
         <button class="btn btn-warning" type="submit" onClick={()=>{
             navigate('/login') }} style={{marginLeft:"20px"}} >Login</button>
       </form>
